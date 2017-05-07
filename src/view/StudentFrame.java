@@ -41,17 +41,12 @@ public class StudentFrame {
 	StudentManage studentManage = new StudentManage();
 	List<Student> list = new ArrayList<Student>();
 
-	public static void main(String[] args) {
-		StudentFrame studnetFrame = new StudentFrame();
-		studnetFrame.init();
-	}
-
 	public void init() {
 		JFrame frame = new JFrame();
 		frame.setSize(800, 500);
 		frame.setLocationRelativeTo(null);
 		frame.setTitle("欢迎使用学生管理系统");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// 点击关闭后关闭程序
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);// 点击关闭后关闭程序
 		JPanel mainPanel = (JPanel) frame.getContentPane();
 		BoxLayout layout = new BoxLayout(mainPanel, BoxLayout.Y_AXIS);
 		mainPanel.setLayout(layout);
@@ -84,9 +79,9 @@ public class StudentFrame {
 		ageText = new JTextField();
 		ageText.setPreferredSize(new Dimension(90, 30));
 		panel1.add(ageText);
-		
-		//班级
-		
+
+		// 班级
+
 		JLabel classnameLabel = new JLabel("班级:");
 		panel1.add(classnameLabel);
 		classnameText = new JTextField();

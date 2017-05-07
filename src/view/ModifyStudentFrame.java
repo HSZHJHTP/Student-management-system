@@ -90,7 +90,7 @@ public class ModifyStudentFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				sex = manRadioButton.getText();
+				sex = "男";
 			}
 		});
 		womanRadioButton = new JRadioButton("女");
@@ -98,15 +98,17 @@ public class ModifyStudentFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				sex = womanRadioButton.getText();
+				sex = "女";
 			}
 		});
 		if (student.getSex().equals("男")) {
 			manRadioButton.setSelected(true);
+			sex = "男";
 
 		} else if (student.getSex().equals("女")) {
 
 			womanRadioButton.setSelected(true);
+			sex = "女";
 		}
 
 		ButtonGroup sexRadiobButtonGroup = new ButtonGroup();
